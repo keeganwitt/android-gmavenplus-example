@@ -13,7 +13,8 @@ import android.widget.TableLayout
  *
  * @author Manfred Moser <manfred@simpligility.com>
  */
-public class HelloFlashlight extends Activity {
+@groovy.transform.CompileStatic
+class HelloFlashlight extends Activity {
     TableLayout table
     Button redButton
     Button greenButton
@@ -22,7 +23,7 @@ public class HelloFlashlight extends Activity {
     Button whiteButton
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main)
 
@@ -35,14 +36,14 @@ public class HelloFlashlight extends Activity {
         whiteButton = (Button) findViewById(R.id.ButtonWhite)
 
         // default the full screen to white
-        table.setBackgroundColor(Color.WHITE)
+        table.backgroundColor = Color.WHITE
 
         // hook up all the buttons with a table color change on click listener
-        redButton.setOnClickListener(OnClickChangeColor(Color.RED))
-        greenButton.setOnClickListener(OnClickChangeColor(Color.GREEN))
-        blueButton.setOnClickListener(OnClickChangeColor(Color.BLUE))
-        blackButton.setOnClickListener(OnClickChangeColor(Color.BLACK))
-        whiteButton.setOnClickListener(OnClickChangeColor(Color.WHITE))
+        redButton.onClickListener = OnClickChangeColor(Color.RED)
+        greenButton.onClickListener = OnClickChangeColor(Color.GREEN)
+        blueButton.onClickListener = OnClickChangeColor(Color.BLUE)
+        blackButton.onClickListener = OnClickChangeColor(Color.BLACK)
+        whiteButton.onClickListener = OnClickChangeColor(Color.WHITE)
     }
 
     /**
@@ -50,10 +51,10 @@ public class HelloFlashlight extends Activity {
      * @param color
      * @return
      */
-    View.OnClickListener OnClickChangeColor(final int color) {
+    private View.OnClickListener OnClickChangeColor(final int color) {
         return new View.OnClickListener() {
             public void onClick(View view) {
-                table.setBackgroundColor(color)
+                table.backgroundColor = color
             }
         }
     }
