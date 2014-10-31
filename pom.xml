@@ -56,7 +56,8 @@
         <extensions>true</extensions>
         <configuration>
           <sdk>
-            <platform>19</platform>
+            <platform>21</platform>
+            <!-- assumes ANDROID_HOME environment variable is set and SDK matching this version is installed there -->
           </sdk>
         </configuration>
       </plugin>
