@@ -37,6 +37,7 @@
         <groupId>org.codehaus.gmavenplus</groupId>
         <artifactId>gmavenplus-plugin</artifactId>
         <version>1.3-SNAPSHOT</version>
+        <!-- works with 1.2, but officially only supported in 1.3 -->
         <executions>
           <execution>
             <goals>
