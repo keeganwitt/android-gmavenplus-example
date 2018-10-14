@@ -12,8 +12,9 @@
 
   <properties>
     <!-- you can use 1.7 if targeting KitKat (19) or higher -->
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
+    <!-- you can use 1.8 if targeting Oreo (26) or higher -->
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
 
   <dependencies>
@@ -26,7 +27,7 @@
     <dependency>
       <groupId>org.codehaus.groovy</groupId>
       <artifactId>groovy</artifactId>
-      <version>2.4.15</version>
+      <version>2.5.6</version>
       <classifier>grooid</classifier>
     </dependency>
   </dependencies>
@@ -61,27 +62,27 @@
       <plugin>
         <groupId>org.codehaus.gmavenplus</groupId>
         <artifactId>gmavenplus-plugin</artifactId>
-        <version>1.6.1</version>
+        <version>1.7.0</version>
         <executions>
           <execution>
             <goals>
               <goal>addSources</goal>
               <goal>addTestSources</goal>
               <goal>compile</goal>
-              <goal>testCompile</goal>
+              <goal>compileTests</goal>
             </goals>
           </execution>
         </executions>
       </plugin>
       <plugin>
-        <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+        <groupId>com.simpligility.maven.plugins</groupId>
         <artifactId>android-maven-plugin</artifactId>
-        <version>4.0.0-rc.2</version>
+        <version>4.5.0</version>
         <extensions>true</extensions>
         <configuration>
           <sdk>
             <!--- a list of version codes is available here: https://developer.android.com/reference/android/os/Build.VERSION_CODES.html -->
-            <platform>26</platform>
+            <platform>28</platform>
             <!-- assumes ANDROID_HOME environment variable set to a location with matching SDK version -->
           </sdk>
         </configuration>
