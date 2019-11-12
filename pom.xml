@@ -12,7 +12,7 @@
 
   <properties>
     <!-- you can use 1.7 if targeting KitKat (19) or higher -->
-    <!-- you can use 1.8 if targeting Oreo (26) or higher -->
+    <!-- you can use 1.8 if targeting Oreo (26) or higher (a subset of Java 8's features work, see https://developer.android.com/studio/write/java8-support#supported_features) -->
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
