@@ -27,7 +27,7 @@
     <dependency>
       <groupId>org.codehaus.groovy</groupId>
       <artifactId>groovy</artifactId>
-      <version>3.0.3</version>
+      <version>3.0.5</version>
       <classifier>grooid</classifier>
     </dependency>
   </dependencies>
@@ -52,7 +52,7 @@
                   <version>[3.1.1,)</version>
                 </requireMavenVersion>
                 <requireJavaVersion>
-                  <version>[${maven.compiler.target},)</version>
+                  <version>[${maven.compiler.target})</version>
                 </requireJavaVersion>
               </rules>
             </configuration>
@@ -62,7 +62,7 @@
       <plugin>
         <groupId>org.codehaus.gmavenplus</groupId>
         <artifactId>gmavenplus-plugin</artifactId>
-        <version>1.9.0</version>
+        <version>1.9.1</version>
         <executions>
           <execution>
             <goals>
@@ -82,7 +82,7 @@
         <configuration>
           <sdk>
             <!--- a list of version codes is available here: https://developer.android.com/reference/android/os/Build.VERSION_CODES.html -->
-            <platform>28</platform>
+            <platform>29</platform>
             <!-- assumes ANDROID_HOME environment variable set to a location with matching SDK version -->
           </sdk>
         </configuration>
