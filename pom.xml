@@ -27,7 +27,7 @@
     <dependency>
       <groupId>org.codehaus.groovy</groupId>
       <artifactId>groovy</artifactId>
-      <version>4.0.12</version>
+      <version>4.0.13</version>
       <classifier>grooid</classifier>
     </dependency>
   </dependencies>
@@ -83,7 +83,7 @@
         <configuration>
           <sdk>
             <!--- a list of version codes is available here: https://developer.android.com/reference/android/os/Build.VERSION_CODES.html -->
-            <platform>29</platform>
+            <platform>33</platform>
             <!-- assumes ANDROID_HOME environment variable set to a location with matching SDK version -->
           </sdk>
         </configuration>
